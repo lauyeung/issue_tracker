@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IssueTracker</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<header>
+  <%= render 'layouts/menu_list' %>
+</header>
+
+
+<section id="main">
+  <%= yield %>
+</section>
+
+<section id="sidebar">
+  <%= render 'layouts/sidebar' %>
+</section>
+
+<footer>
+  <%= render 'layouts/menu_list' %>
+</footer>
+
+</body>
+</html>
+
+<!-- This is from the "Introduction to Views" Apollo assignment -->
+<!--   <p>
+    The current time is: <%= Time.now %>
+    <%= the_time = Time.now.to_i%2 %>
+    <% if the_time == 0 %>
+      <style type="text/css">
+        .even {color:red;}
+        li.time {color:blue;font-style:italic;}
+      </style>
+      <div class="even">
+        here's a bunch of HTML!
+        <ol>
+          <li class="time"> a list!</li>
+          <li> This one is different!</li>
+          <li><%= "all because the time was #{the_time}" %></li>
+        </ol>
+      </div>
+    <% else %>
+      <style type="text/css">
+        .odd.time {font-weight:bold;font-size:0.5em;}
+      </style>
+      <span class="odd time"> This is what you see when things get odd</span>
+    <% end %>
+  </p> -->
